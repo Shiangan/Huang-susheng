@@ -832,6 +832,49 @@
             '_blank'
         );
     }
+function orderFlower(styleName, price) {
+    // 自動從頁面資訊抓取（或手動設定常數）
+    const deceasedName = "黃蘇生 先生";
+    const funeralDate = "115 年 04 月 21 日";
+    const location = "台北市立殯儀館 景行樓 3F［至仁三廳］";
+    const session = "家奠 07:50 / 公奠 08:30";
+
+    const message = `［ 訂購花籃請協助填寫以下資訊 ］
+📌花籃都是一對的（標價也是一對的價格）
+
+往生大德：${deceasedName}
+出殯日期：${funeralDate}
+出殯地點禮廳：${location}
+出殯場次：${session}
+
+花籃樣式：${styleName}
+數量：1 對
+總金額：${price}
+
+贈送人名單：（請在此輸入落款名單）
+
+收據抬頭：
+收據寄送地址：
+聯繫人：
+聯繫電話：
+
+備註：
+
+────────────────
+匯款帳號
+玉山銀行 808 三和分行
+帳號 0255979059398
+戶名：陳柏元
+
+PS:匯款後再麻煩幫我提供相關匯款資訊，以便登記完成訂購`;
+
+    // 產生 LINE 分享連結
+    const lineUrl = `https://line.me/R/msg/text/?${encodeURIComponent(message)}`;
+    window.open(lineUrl, '_blank');
+}
+
+        
+        
     </script>
 </body>
 </html>
